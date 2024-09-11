@@ -31,13 +31,17 @@ let package = Package(
       name: "GooglePlacesSwiftTarget",
       dependencies: [
         "ios-places-swift-sdk",
-      ]
+      ],
+      path: "PlacesSwift",
+      sources: ["Empty.swift"]
     ),
     .target(
       name: "GooglePlacesObjcTarget",
       dependencies: [
         "ios-places-sdk",
-      ]
+      ],
+      path: "PlacesSwift",
+      sources: ["Empty.swift"]
     )
   ]
 )
