@@ -41,7 +41,7 @@ let package = Package(
         "ios-places-sdk",
       ],
       path: "PlacesSwift",
-      sources: ["Empty.swift"]
+      sources: ["Empty2.swift"]
     )
   ]
 )
