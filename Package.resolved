@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "GooglePlaces",
+        "repositoryURL": "https://github.com/googlemaps/ios-places-sdk",
+        "state": {
+          "branch": null,
+          "revision": "7b3af6b3087b183444f6cb51dd80d416c98f9e53",
+          "version": "9.1.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
