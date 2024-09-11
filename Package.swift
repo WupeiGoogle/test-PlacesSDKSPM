@@ -19,8 +19,8 @@ import PackageDescription
 let package = Package(
   name: "GooglePlacesSwiftPreivew", platforms: [.iOS(.v15)],
   products: [
-    .library(name: "GooglePlacesSwift", targets: ["GooglePlacesSwiftRefTarget"]),
-    .library(name: "GooglePlacesObjc", targets: ["GooglePlacesObjcRefTarget"]),
+    .library(name: "GooglePlacesSwiftRef", targets: ["GooglePlacesSwiftRefTarget"]),
+    .library(name: "GooglePlacesObjcRef", targets: ["GooglePlacesRefTarget"]),
   ],
   dependencies: [
     .package(url: "https://github.com/googlemaps/ios-places-swift-sdk", from: "0.2.0"),
@@ -30,15 +30,15 @@ let package = Package(
     .target(
       name: "GooglePlacesSwiftRefTarget",
       dependencies: [
-        "ios-places-swift-sdk",
+        .product(name: "GooglePlacesSwift", package: "ios-places-swift-sdk"),
       ],
       path: "PlacesSwift",
       sources: ["Empty.swift"]
     ),
     .target(
-      name: "GooglePlacesObjcRefTarget",
+      name: "GooglePlacesRefTarget",
       dependencies: [
-        "ios-places-sdk",
+        .product(name: "GooglePlaces", package: "ios-places-sdk"),
       ],
       path: "PlacesSwift",
       sources: ["Empty2.swift"]
